@@ -1,0 +1,21 @@
+footer {
+  padding: 20px;
+  background-color: #272727;
+  color: #ffffff;
+  font-size: .9rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+footer a {
+  font-weight: 500;
+  color: #fff;
+}
+
+footer a:hover {
+  color: #e67e22;
+}
+
+footer p:first-child {
+  margin-bottom: .7em;
+}
