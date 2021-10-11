@@ -1,5 +1,3 @@
-// import { checkForURL } from './js/urlChecker.js'
-
 function handleSubmit(event) {
     event.preventDefault();
 
@@ -16,7 +14,7 @@ function handleSubmit(event) {
         body: JSON.stringify({url: formURL})       
       })
       .then(res => res.json())
-      .then(function(res) {
+      .then(res => {
         // Log to the console for debugging
         console.log(res);
         // Update UI
@@ -26,9 +24,8 @@ function handleSubmit(event) {
         document.getElementById('confidence').innerHTML = `Confidence: <span>${res.confidence}</span>`
       })
     } else (
-      alert('Please enter a valid URL.')
+      alert('Enter a valid URL.')
     );
-
 }
 
 export { handleSubmit }
