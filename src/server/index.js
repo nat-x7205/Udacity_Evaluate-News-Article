@@ -18,7 +18,7 @@ const cors = require('cors');
 app.use(cors());
 
 // Initialize the main project folder
-app.use(express.static('dist'));
+app.use(express.static('src/client'));
 
 // Designates what port the app will listen to for incoming requests
 const port = 8080;
@@ -27,10 +27,16 @@ app.listen(port, () => {
   console.log(`The server is running on localhost:${port}`)
 });
 
+// console.log(__dirname);
+
 app.get('/', (req, res) => {
   // res.sendFile('dist/index.html')
-  res.sendFile(path.resolve('dist/index.html'))
+  res.sendFile(path.resolve('src/client/views/index.html'))
 });
+
+// app.get('/test', function (req, res) {
+//   res.send(mockAPIResponse)
+// })
 
 // Declare an API key variable
 const api_key = process.env.API_KEY;
@@ -46,10 +52,22 @@ app.post('/data', async (req, res) => {
 
   try {
     const newData = await semanticAnalysis.json();
-    // console.log(newData);
+    console.log(newData);
     res.send(newData);
   } catch(error) {
     // Appropriately handle the error
     console.log("Error", error);
   }  
 })
+
+/*
+  app.post('/addData', (req, res) => {
+    res.send(req.body);
+  });
+*/
+
+/* Udacity Knowledge info:
+fetch("https://api.meaningcloud.com/sentiment-2.1?key=<API_KEY>&of=json&url=<URL_INPUT>&lang=en", {
+  method: "POST"
+})
+*/
