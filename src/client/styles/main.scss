@@ -1,11 +1,14 @@
+$orange: #e67e22;
+$text-bold: 500;
+
 h1, h2, h3, #results {
   text-align: center;
 }
 
 h1 {
   font-size: 2.5rem;
-  font-weight: 500;
-  color: #e67e22;
+  font-weight: $text-bold;
+  color: $orange;
   text-transform: uppercase;
   margin-top: 7rem;
 }
@@ -17,17 +20,21 @@ h2 {
 }
 
 h3 {
-  color: #e67e22;
+  color: $orange;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: $text-bold;
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
 }
 
 .analysis-results {
   margin-bottom: 1rem;
+
+  span {
+    font-weight: $text-bold;
+  }
 }
 
-.analysis-results span {
-  font-weight: 500;
-}
+// .analysis-results span {
+//   font-weight: $text-bold;
+// }

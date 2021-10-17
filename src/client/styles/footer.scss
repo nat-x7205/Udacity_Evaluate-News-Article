@@ -1,21 +1,40 @@
+$footer-text-color: #fff;
+
 footer {
   padding: 20px;
   background-color: #272727;
-  color: #ffffff;
+  color: $footer-text-color;
   font-size: .9rem;
   line-height: 1.2;
   text-align: center;
+
+  a {
+    font-weight: 500;
+    color: $footer-text-color;
+
+    &:hover {
+      color: #e67e22;
+    }
+  }
+
+  p {
+    &:first-child {
+      margin-bottom: .7em;
+    }
+  }
 }
 
-footer a {
-  font-weight: 500;
-  color: #fff;
-}
 
-footer a:hover {
-  color: #e67e22;
-}
+// CSS:
+// footer a {
+//   font-weight: 500;
+//   color: $footer-text-color;
+// }
 
-footer p:first-child {
-  margin-bottom: .7em;
-}
+// footer a:hover {
+//   color: #e67e22;
+// }
+
+// footer p:first-child {
+//   margin-bottom: .7em;
+// }

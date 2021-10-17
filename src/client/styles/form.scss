@@ -24,12 +24,22 @@ button {
   font-weight: 500;
   font-size: .9rem;
   letter-spacing: 3px;
+
+  &:hover {
+    background-color: #d15519;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
 }
 
-button:hover {
-  background-color: #d86f21;
-}
 
-button:active {
-  transform: translateY(1px);
-}
+// CSS:
+// button:hover {
+//   background-color: #d86f21;
+// }
+
+// button:active {
+//   transform: translateY(1px);
+// }
