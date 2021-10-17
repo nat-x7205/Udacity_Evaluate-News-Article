@@ -18,7 +18,7 @@ const cors = require('cors');
 app.use(cors());
 
 // Initialize the main project folder
-app.use(express.static('src/client'));
+app.use(express.static('dist'));
 
 // Designates what port the app will listen to for incoming requests
 const port = 8080;
@@ -31,7 +31,7 @@ app.listen(port, () => {
 
 app.get('/', (req, res) => {
   // res.sendFile('dist/index.html')
-  res.sendFile(path.resolve('src/client/views/index.html'))
+  res.sendFile(path.resolve('dist/index.html'))
 });
 
 // app.get('/test', function (req, res) {
