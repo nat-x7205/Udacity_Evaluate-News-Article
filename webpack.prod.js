@@ -9,7 +9,7 @@ module.exports = {
     entry: './src/client/index.js',
     mode: 'production',
     optimization: {
-      minimizer: [new TerserPlugin({}), new OptimizeCSSAssetsPlugin({})],
+      minimizer: [new TerserPlugin({}), new OptimizeCSSAssetsPlugin({})]
     },
     output: {
       libraryTarget: 'var',
@@ -24,14 +24,14 @@ module.exports = {
         },
         {
           test: /\.scss$/,
-          use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+          use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
         }
       ]
     },
     plugins: [
       new HtmlWebPackPlugin({
         template: "./src/client/views/index.html",
-        filename: "./index.html",
+        filename: "./index.html"
       }),
       new MiniCssExtractPlugin({ filename: "[name].css" })
     ]
