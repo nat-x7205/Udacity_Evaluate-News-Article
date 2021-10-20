@@ -1,5 +1,3 @@
-// import { checkForURL } from './js/urlChecker.js'
-
 function handleSubmit(event) {
     event.preventDefault();
 

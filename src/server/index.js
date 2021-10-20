@@ -2,7 +2,6 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 var path = require('path'); // check if needed
-// const mockAPIResponse = require('./mockAPI.js');
 // const fetch = require('node-fetch');
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
@@ -27,16 +26,9 @@ app.listen(port, () => {
   console.log(`The server is running on localhost:${port}`)
 });
 
-// console.log(__dirname);
-
 app.get('/', (req, res) => {
-  // res.sendFile('dist/index.html')
   res.sendFile(path.resolve('dist/index.html'))
 });
-
-// app.get('/test', function (req, res) {
-//   res.send(mockAPIResponse)
-// })
 
 // Declare an API key variable
 const api_key = process.env.API_KEY;
@@ -59,15 +51,3 @@ app.post('/data', async (req, res) => {
     console.log("Error", error);
   }  
 })
-
-/*
-  app.post('/addData', (req, res) => {
-    res.send(req.body);
-  });
-*/
-
-/* Udacity Knowledge info:
-fetch("https://api.meaningcloud.com/sentiment-2.1?key=<API_KEY>&of=json&url=<URL_INPUT>&lang=en", {
-  method: "POST"
-})
-*/
