@@ -21,7 +21,7 @@ app.use(cors());
 app.use(express.static('dist'));
 
 // Designates what port the app will listen to for incoming requests
-const port = 8080;
+const port = 8081;
 app.listen(port, () => {
   // Callback to debug
   console.log(`The server is running on localhost:${port}`)

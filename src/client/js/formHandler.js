@@ -6,10 +6,10 @@ function handleSubmit(event) {
     // Check what text was put into the form field
     let formURL = document.getElementById('name').value;
 
-    if (checkForURL(formURL)) {
+    if (Client.checkForURL(formURL)) {
       console.log("::: Form Submitted :::");
 
-      fetch('http://localhost:8080/data', {
+      fetch('http://localhost:8081/data', {
         method: 'POST',
         credentials: 'same-origin',
         headers: { 'Content-Type': 'application/json' },
