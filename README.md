@@ -15,6 +15,8 @@ Sentiment Analysis performed by [MeaningCloud.com](https://www.meaningcloud.com/
 - Express
 - API
 - Webpack
+- Jest
+- Workbox Service Worker
 
 ## License
 The app is free for the personal use.
